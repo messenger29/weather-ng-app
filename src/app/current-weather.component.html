@@ -1,0 +1,6 @@
+<div *ngIf="forecastData;else content_loading">
+	<img src="http://openweathermap.org/img/w/{{forecastData.weather[0].icon}}.png">
+	<p>Temp: {{forecastData.main.temp}}</p>
+</div>
+
+<ng-template #content_loading>Loading...</ng-template>
